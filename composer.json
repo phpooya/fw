@@ -1,0 +1,19 @@
+{
+    "name": "phpooya/poe",
+    "description": "a simple framework.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Pooya",
+            "email": "peraghi@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "poe\\": ""
+        }
+    }
+}
