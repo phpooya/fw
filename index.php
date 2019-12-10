@@ -1,15 +1,13 @@
 <?php
-require "core/helpers.php";
-require "core/Initializer.php";
-require "core/Configurable.php";
-require "core/TypeHints.php";
-
 use poe\core\Configurable;
 use poe\core\Initializer;
 use poe\core\TypeHints;
 
-class Book {
-    use Initializer, Configurable, TypeHints;
+require "vendor/autoload.php";
+require "core/helpers.php";
+
+class BaseObject {
+    use Configurable, Initializer, TypeHints;
 
     public $name;
 
@@ -18,7 +16,14 @@ class Book {
         $this->configure($config);
         $this->initialTraits();
     }
+
+    public function getTypeHints()
+    {
+        return [
+            'name' => 'dir'
+        ];
+    }
 }
 
-$b = new Book(['name' => 'Pooya']);
+$b = new BaseObject(['name' => __DIR__]);
 echo json_encode($b);
