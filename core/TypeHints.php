@@ -15,12 +15,12 @@ trait TypeHints
         $typeHintsCallablePairs = $this->typeHintsCallablePairs();
 
         foreach ($this->getTypeHints() as $attr => $type) {
-            if (is_callable($type)) {
+            if (is_string($type) and array_key_exists($type, $typeHintsCallablePairs)) {
+                $if = call_user_func($typeHintsCallablePairs[$type], $this->$attr);
+            }
+            elseif (is_callable($type)) {
                 $if = call_user_func($type, $this->$attr);
                 $type = "predefined type";
-            }
-            elseif (array_key_exists($type, $typeHintsCallablePairs)) {
-                $if = call_user_func($typeHintsCallablePairs[$type], $this->$attr);
             }
             else {
                 $if = $this->$attr instanceof $type;
