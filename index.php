@@ -2,12 +2,17 @@
 use poe\core\Configurable;
 use poe\core\Initializer;
 use poe\core\TypeHints;
+use poe\core\Accessor;
 
 require "vendor/autoload.php";
 require "core/helpers.php";
 
+/**
+ * Class BaseObject
+ * @property $rand
+ */
 class BaseObject {
-    use Configurable, Initializer, TypeHints;
+    use Configurable, Initializer, TypeHints, Accessor;
 
     public $name;
 
@@ -23,7 +28,13 @@ class BaseObject {
             'name' => 'dir'
         ];
     }
+
+    public function getRandAttribute()
+    {
+        return rand(1, 1000);
+    }
 }
 
 $b = new BaseObject(['name' => __DIR__]);
 echo json_encode($b);
+echo $b->rand;
