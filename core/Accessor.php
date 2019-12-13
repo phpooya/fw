@@ -24,7 +24,7 @@ trait Accessor
     {
         $method = "set" . ucfirst($name) . "Attribute";
         if (method_exists($this, $method)) {
-            call_user_func([$this, $method], $value);
+            return call_user_func([$this, $method], $value);
         }
 
         $method = "get" . ucfirst($name) . "Attribute";

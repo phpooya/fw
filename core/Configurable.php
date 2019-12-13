@@ -7,10 +7,10 @@ trait Configurable
 {
     public function configure(array $config = [])
     {
-        $isAccessor = in_array(Accessor::class, trait_uses_recursive(static::class));
+        $hasSetter = method_exists($this, '__set');
 
         foreach ($config as $attr => $value) {
-            if (!$isAccessor and !property_exists($this, $attr)) {
+            if (!$hasSetter and !property_exists($this, $attr)) {
                 throw new Exception(sprintf("attribute '%s' does not exists on '%s'", $attr, static::class));
             }
 

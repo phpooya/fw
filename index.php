@@ -10,6 +10,7 @@ require "core/helpers.php";
 /**
  * Class BaseObject
  * @property $rand
+ * @property $cap
  */
 class BaseObject {
     use Configurable, Initializer, TypeHints, Accessor;
@@ -33,8 +34,13 @@ class BaseObject {
     {
         return rand(1, 1000);
     }
+
+    private $_cap;
+    public function setCapAttribute($value)
+    {
+        $this->_cap = strtoupper($value);
+    }
 }
 
-$b = new BaseObject(['name' => __DIR__]);
-echo json_encode($b);
-echo $b->rand;
+$b = new BaseObject(['name' => __DIR__, 'cap' => 'hello world']);
+var_dump($b, $b->rand);
