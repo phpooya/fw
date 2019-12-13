@@ -6,7 +6,6 @@ use phpooya\fm\core\Accessor;
 use phpooya\fm\core\ArrayJson;
 
 require "vendor/autoload.php";
-require "core/helpers.php";
 
 /**
  * Class BaseObject
