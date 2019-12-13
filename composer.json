@@ -15,8 +15,6 @@
         "psr-4": {
             "phpooya\\fm\\": ""
         },
-        "files": [
-            "core/helpers.php"
-        ]
+        "files": []
     }
 }

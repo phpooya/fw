@@ -1,5 +1,5 @@
 <?php
-namespace phpooya\structure;
+namespace phpooya\fm\structure;
 
 use phpooya\fm\core\Accessor;
 use phpooya\fm\core\ArrayJson;
