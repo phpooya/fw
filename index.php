@@ -1,7 +1,9 @@
 <?php
 use phpooya\fm\tests\User;
+use phpooya\fm\helper\Env;
 
 require "vendor/autoload.php";
+Env::set('env', 'develop');
 
 $user = new User([
     'id' => 1,

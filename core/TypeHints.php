@@ -2,12 +2,15 @@
 namespace phpooya\fm\core;
 
 use Exception;
+use phpooya\fm\helper\Env;
 
 trait TypeHints
 {
     public function initialTypeHints()
     {
-        $this->validateTypeHints();
+        if (Env::get('env') === 'develop') {
+            $this->validateTypeHints();
+        }
     }
 
     public function validateTypeHints()

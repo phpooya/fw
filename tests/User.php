@@ -3,6 +3,10 @@ namespace phpooya\fm\tests;
 
 use phpooya\fm\core\TypeHints;
 
+/**
+ * Class User
+ * @property string $fullName
+ */
 class User extends Model
 {
     use TypeHints;
@@ -16,7 +20,7 @@ class User extends Model
     public function getTypeHints()
     {
         return [
-            'id' => 'int',
+            'id' => 'numeric',
             'fName' => 'string',
             'lName' => 'string',
             'mobile' => 'numeric',
