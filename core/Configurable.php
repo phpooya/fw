@@ -1,5 +1,5 @@
 <?php
-namespace poe\core;
+namespace phpooya\fm\core;
 
 use Exception;
 

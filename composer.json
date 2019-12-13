@@ -1,5 +1,5 @@
 {
-    "name": "phpooya/poe",
+    "name": "phpooya/fm",
     "description": "a simple framework.",
     "type": "library",
     "license": "MIT",
@@ -13,7 +13,7 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "poe\\": ""
+            "phpooya\\fm\\": ""
         },
         "files": [
             "core/helpers.php"

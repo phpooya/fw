@@ -1,9 +1,9 @@
 <?php
-use poe\core\Configurable;
-use poe\core\Initializer;
-use poe\core\TypeHints;
-use poe\core\Accessor;
-use poe\core\ArrayJson;
+use phpooya\fm\core\Configurable;
+use phpooya\fm\core\Initializer;
+use phpooya\fm\core\TypeHints;
+use phpooya\fm\core\Accessor;
+use phpooya\fm\core\ArrayJson;
 
 require "vendor/autoload.php";
 require "core/helpers.php";
