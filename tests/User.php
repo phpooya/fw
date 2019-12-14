@@ -24,7 +24,8 @@ class User extends Model
             'fName' => 'string',
             'lName' => 'string',
             'mobile' => 'numeric',
-            'image' => 'file'
+            'image' => 'file',
+            'fullName' => 'string'
         ];
     }
 

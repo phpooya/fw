@@ -6,7 +6,7 @@ require "vendor/autoload.php";
 Env::set('env', 'develop');
 
 $user = new User([
-    'id' => 1,
+    'id' => '1234',
     'fName' => 'Pooya',
     'lName' => 'Eraghi',
     'mobile' => '09153594313',

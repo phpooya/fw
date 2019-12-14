@@ -23,10 +23,11 @@ trait TypeHints
             }
             elseif (is_callable($type)) {
                 $if = call_user_func($type, $this->$attr);
-                $type = "predefined type";
+                $type = "?";
             }
             else {
                 $if = $this->$attr instanceof $type;
+                $type = get_class($this);
             }
 
             if (!$if) {
