@@ -1,8 +1,8 @@
 <?php
-namespace phpooya\fm\core;
+namespace phpooya\fw\core;
 
 use Exception;
-use phpooya\fm\helper\Env;
+use phpooya\fw\helper\Env;
 
 trait TypeHints
 {

@@ -1,10 +1,10 @@
 <?php
-namespace phpooya\fm\structure;
+namespace phpooya\fw\structure;
 
-use phpooya\fm\core\Accessor;
-use phpooya\fm\core\ArrayJson;
-use phpooya\fm\core\Configurable;
-use phpooya\fm\core\Initializer;
+use phpooya\fw\core\Accessor;
+use phpooya\fw\core\ArrayJson;
+use phpooya\fw\core\Configurable;
+use phpooya\fw\core\Initializer;
 
 class BaseModel
 {

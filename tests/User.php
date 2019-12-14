@@ -1,7 +1,7 @@
 <?php
-namespace phpooya\fm\tests;
+namespace phpooya\fw\tests;
 
-use phpooya\fm\core\TypeHints;
+use phpooya\fw\core\TypeHints;
 
 /**
  * Class User

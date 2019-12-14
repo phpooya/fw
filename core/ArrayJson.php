@@ -1,5 +1,5 @@
 <?php
-namespace phpooya\fm\core;
+namespace phpooya\fw\core;
 
 use ReflectionClass;
 use ReflectionProperty;

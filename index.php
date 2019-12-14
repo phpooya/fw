@@ -1,6 +1,6 @@
 <?php
-use phpooya\fm\tests\User;
-use phpooya\fm\helper\Env;
+use phpooya\fw\tests\User;
+use phpooya\fw\helper\Env;
 
 require "vendor/autoload.php";
 Env::set('env', 'develop');

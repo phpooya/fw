@@ -1,7 +1,7 @@
 <?php
-namespace phpooya\fm\tests;
+namespace phpooya\fw\tests;
 
-use phpooya\fm\structure\BaseModel;
+use phpooya\fw\structure\BaseModel;
 
 class Model extends BaseModel
 {

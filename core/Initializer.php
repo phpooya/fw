@@ -1,7 +1,7 @@
 <?php
-namespace phpooya\fm\core;
+namespace phpooya\fw\core;
 
-use phpooya\fm\helper\Obj;
+use phpooya\fw\helper\Obj;
 
 trait Initializer
 {

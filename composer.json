@@ -1,5 +1,5 @@
 {
-    "name": "phpooya/fm",
+    "name": "phpooya/fw",
     "description": "a simple framework.",
     "type": "library",
     "license": "MIT",
@@ -13,7 +13,7 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "phpooya\\fm\\": ""
+            "phpooya\\fw\\": ""
         },
         "files": []
     }
