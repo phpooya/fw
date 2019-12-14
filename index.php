@@ -9,7 +9,7 @@ $user = new User([
     'id' => '1234',
     'fName' => 'Pooya',
     'lName' => 'Eraghi',
-    'mobile' => '09153594313',
+    'mobile' => '091512345678',
     'image' => __FILE__
 ]);
 echo $user->toJson(JSON_PRETTY_PRINT);
