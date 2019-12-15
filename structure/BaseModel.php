@@ -6,7 +6,7 @@ use phpooya\fw\core\ArrayJson;
 use phpooya\fw\core\Configurable;
 use phpooya\fw\core\Initializer;
 
-class BaseModel
+trait BaseModel
 {
     use Configurable, Initializer, Accessor, ArrayJson;
 
