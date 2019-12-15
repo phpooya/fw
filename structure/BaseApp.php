@@ -2,13 +2,12 @@
 namespace phpooya\fw\structure;
 
 use phpooya\fw\core\Accessor;
-use phpooya\fw\core\ArrayJson;
 use phpooya\fw\core\Configurable;
 use phpooya\fw\core\Initializer;
 
-abstract class BaseModel
+abstract class BaseApp
 {
-    use Configurable, Initializer, Accessor, ArrayJson;
+    use Configurable, Initializer, Accessor;
 
     public function __construct($config = [])
     {

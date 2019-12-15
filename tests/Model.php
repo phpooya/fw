@@ -3,7 +3,7 @@ namespace phpooya\fw\tests;
 
 use phpooya\fw\structure\BaseModel;
 
-class Model
+class Model extends BaseModel
 {
-    use BaseModel;
+
 }

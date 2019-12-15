@@ -5,7 +5,7 @@ use phpooya\fw\core\Accessor;
 use phpooya\fw\core\ArrayJson;
 use phpooya\fw\core\Configurable;
 
-trait BaseObject
+abstract class BaseObject
 {
     use Configurable, Accessor, ArrayJson;
 
