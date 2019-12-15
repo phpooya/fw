@@ -12,5 +12,11 @@ abstract class BaseObject
     public function __construct($options = [])
     {
         $this->configure($options);
+        $this->init();
+    }
+
+    public function init()
+    {
+        //must be empty always, use construct instead
     }
 }

@@ -13,5 +13,11 @@ abstract class BaseApp
     {
         $this->configure($config);
         $this->initialTraits();
+        $this->init();
+    }
+
+    public function init()
+    {
+        //must be empty always, use construct instead
     }
 }
