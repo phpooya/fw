@@ -11,22 +11,14 @@ trait ArrayJson
     {
         $r = new ReflectionClass($this);
         $attrs = $r->getProperties(ReflectionProperty::IS_PUBLIC);
-        $return = [];
+        $return = $fields = [];
         foreach ($attrs as $attr) {
             if ($attr->isStatic()) continue;
-            $value = $this->{$attr->name};
-            $isArrayJson = is_object($value) and in_array(ArrayJson::class, Obj::classUsesRecursive($value));
-            if ($isArrayJson) {
-                /** @var ArrayJson $value */
-                //@todo: check recursive loop
-                $return[$attr->name] = $value->toArray();
-            } else {
-                $return[$attr->name] = $value;
-            }
+            $fields[] = $attr->name;
         }
-        foreach ($this->getExtraFields() as $extra) {
+        foreach (array_merge($fields, $this->getExtraFields()) as $extra) {
             $value = $this->$extra;
-            $isArrayJson = is_object($value) and in_array(ArrayJson::class, Obj::classUsesRecursive($value));
+            $isArrayJson = (is_object($value) and in_array(ArrayJson::class, Obj::classUsesRecursive($value)));
             if ($isArrayJson) {
                 /** @var ArrayJson $value */
                 //@todo: check recursive loop
