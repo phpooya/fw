@@ -27,11 +27,11 @@ trait TypeHints
             }
             else {
                 $if = $this->$attr instanceof $type;
-                $type = get_class($this);
             }
 
             if (!$if) {
-                throw new Exception(sprintf("attribute '%s' must be '%s', '%s' given", $attr, $type, gettype($this->$attr)));
+                $is = is_object($this->$attr) ? get_class($this->$attr) : gettype($this->$attr);
+                throw new Exception(sprintf("attribute '%s' must be '%s', '%s' given", $attr, $type, $is));
             }
         }
     }

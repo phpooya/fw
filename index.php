@@ -16,4 +16,5 @@ $user = new User([
 //echo $user->toJson(JSON_PRETTY_PRINT);
 
 $app = new App();
+$app->session['userId'] = $user->id;
 echo $app->toJson(JSON_PRETTY_PRINT);

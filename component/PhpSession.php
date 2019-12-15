@@ -13,8 +13,16 @@ trait PhpSession
 {
     use BaseComponent;
 
+    /** @var SessionInterface */
+    private $_session;
+
     public function getSessionAttribute()
     {
-        return new Session();
+        if ($this->_session === null) {
+            $this->_session = new Session();
+            $this->_session->start();
+        }
+
+        return $this->_session;
     }
 }

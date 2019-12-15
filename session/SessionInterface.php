@@ -1,7 +1,9 @@
 <?php
 namespace phpooya\fw\session;
 
-interface SessionInterface
-{
+use ArrayAccess;
 
+interface SessionInterface extends ArrayAccess
+{
+    public function start();
 }
