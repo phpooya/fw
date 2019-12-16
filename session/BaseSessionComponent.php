@@ -4,7 +4,7 @@ namespace phpooya\fw\session;
 use phpooya\fw\structure\BaseComponent;
 
 /**
- * Trait PhpSession
+ * Trait BaseSessionComponent
  * @property SessionInterface $session
  */
 trait BaseSessionComponent
@@ -25,6 +25,6 @@ trait BaseSessionComponent
         return $this->_session;
     }
 
-    /** @return SessionInterface */
+    /** @return string */
     abstract protected function sessionClass();
 }
