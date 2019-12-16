@@ -1,28 +1,15 @@
 <?php
 namespace phpooya\fw\component;
 
-use phpooya\fw\structure\BaseComponent;
-use phpooya\fw\session\SessionInterface;
+use phpooya\fw\session\BaseSessionComponent;
 use phpooya\fw\session\PhpSession as Session;
 
-/**
- * Trait PhpSession
- * @property SessionInterface $session
- */
 trait PhpSession
 {
-    use BaseComponent;
+    use BaseSessionComponent;
 
-    /** @var SessionInterface */
-    private $_session;
-
-    public function getSessionAttribute()
+    protected function sessionClass()
     {
-        if ($this->_session === null) {
-            $this->_session = new Session();
-            $this->_session->start();
-        }
-
-        return $this->_session;
+        return Session::class;
     }
 }
