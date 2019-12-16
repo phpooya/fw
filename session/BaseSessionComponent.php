@@ -25,5 +25,6 @@ trait BaseSessionComponent
         return $this->_session;
     }
 
+    /** @return SessionInterface */
     abstract protected function sessionClass();
 }
